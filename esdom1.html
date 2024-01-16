@@ -1,4 +1,4 @@
-Get the value of the firstName text input field and print it in the console.
+
 
 <html>
   <body>
@@ -22,6 +22,15 @@ Get the value of the firstName text input field and print it in the console.
 </html>
 
 <script>
-   let firstName = document.querySelector("label");
-   console.log(firstName.value);
+  document.addEventListener("DOMContentLoaded", function() {
+
+    let firstNameInput = document.getElementById("firstName");
+
+    if (firstNameInput) {
+      var firstNameValue = firstNameInput.value;
+      console.log("First Name:", firstNameValue);
+    } else {
+      console.error("Element with id 'firstName' not found");
+    }
+  });
 </script>
