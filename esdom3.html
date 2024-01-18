@@ -22,7 +22,17 @@ Get the value of all input and label fields.
 </html>
 
 <script>
-  let lab = document.querySelectorAll("label");
-  let inp = document.querySelectorAll("input");
-  console.log(lab.value , inp.value );
+ document.addEventListener('DOMContentLoaded', function() {
+    var firstNameValue = document.getElementById("firstName").value;
+    var lastNameValue = document.getElementById("lastName").value;
+    var ageValue = document.getElementById("age").value;
+
+    var firstNameLabel = document.querySelector('label[for="firstName"]').innerText;
+    var lastNameLabel = document.querySelector('label[for="lastName"]').innerText;
+    var ageLabel = document.querySelector('label[for="age"]').innerText;
+
+    console.log(firstNameLabel + ' ' + firstNameValue);
+    console.log(lastNameLabel + ' ' + lastNameValue);
+    console.log(ageLabel + ' ' + ageValue);
+  });
 </script>
